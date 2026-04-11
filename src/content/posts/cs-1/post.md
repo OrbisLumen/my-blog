@@ -26,7 +26,7 @@ For first project, I think it is okay.<br>
 It can be seen as `the start of my cs journey`
 
 ## Content
-    knowledge
+knowledge
 1. basic knowledge of cpp
 2. process control
 3. function calls
