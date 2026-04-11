@@ -2,7 +2,7 @@
 title: pvz-for-learning
 published: 2025-12-22
 description: The start of my cs journey
-tags: ["CS", "OrbisLumen","cpp","c","project"]
+tags: ["CS", "OrbisLumen","cpp","c","project","UESTC"]
 category: CS
 draft: false
 ---
