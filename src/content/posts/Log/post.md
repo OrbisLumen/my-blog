@@ -6,7 +6,7 @@ priority: 0
 description: Here is the update log of this blog
 image: "./cover.webp"
 tags: ["Blog", "OrbisLumen"]
-category: Technology
+category: Log
 draft: false
 ---
 
