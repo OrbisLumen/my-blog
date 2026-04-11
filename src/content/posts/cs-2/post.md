@@ -1,6 +1,6 @@
 ---
 title: CS61A
-published: 2025-03-30
+published: 2026-03-30
 description: cs61a self-learning 
 tags: ["CS", "OrbisLumen","py","scheme","sql","UCB"]
 category: CS

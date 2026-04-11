@@ -1,6 +1,6 @@
 ---
 title: acm journey
-published: 2025-04-04
+published: 2026-04-04
 description: short journey for acm
 tags: ["CS", "OrbisLumen","c1ampy","py","c","cpp","UESTC"]
 category: CS
