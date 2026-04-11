@@ -2,7 +2,6 @@
 title: Building Blog
 published: 2026-04-11
 description: Finally finishing building this blog for my self
-image: "./cover.webp"
 tags: ["Blog", "OrbisLumen"]
 category: Technology
 draft: false
