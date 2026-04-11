@@ -154,8 +154,10 @@ The finals were about to begin.
   - 5 problems → First Prize  
 
 ---
+![record](./photo.png)
 
-### Aftermath
+
+## Aftermath
 
 It was a final full of pressure, frustration, breakthroughs, and small moments of clarity.
 
