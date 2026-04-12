@@ -5,7 +5,11 @@ import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { Icon } from "astro-icon/components";
 
 import { siteConfig } from "../config";
-import { getAllTags, getDiaryList } from "../data/diary";
+//import { getAllTags, getDiaryList } from "../data/diary";
+import {
+	getMarkdownDiaryList,
+	getMarkdownDiaryTags,
+} from "../utils/diary-content";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 
@@ -13,8 +17,10 @@ if (!siteConfig.featurePages.diary) {
 	return Astro.redirect("/404/");
 }
 
-const moments = getDiaryList();
-const allTags = getAllTags();
+//const moments = getDiaryList();
+//const allTags = getAllTags();
+const moments = await getMarkdownDiaryList();
+const allTags = await getMarkdownDiaryTags();
 
 const filterTabs = [
 	{
