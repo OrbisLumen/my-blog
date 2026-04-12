@@ -10,6 +10,10 @@ category: Log
 draft: false
 ---
 
+## Update log 4 (2026-04-12)
+
+Import music from Netease Music.
+
 ## Update log 3 (2026-04-12)
 
 Change the `diary` function's work style.
