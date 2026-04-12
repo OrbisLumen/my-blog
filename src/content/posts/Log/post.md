@@ -10,14 +10,14 @@ category: Log
 draft: false
 ---
 
-## Update log 2
+## Update log 2 (2026-04-12)
 
 Open the `comments` function.
 
-## Update log 1
+## Update log 1 (2026-04-12)
 
 Open the `diary` function, and write an example for diary. 
 
-## Initial
+## Initial (2026-04-11)
 
 Finish the `post` and `animate` functions, change the whole blog's style for myself and close `diary`, `projects`, `skills`, `timeline`, `albums` and `devices` functions.
