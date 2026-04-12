@@ -10,6 +10,12 @@ category: Log
 draft: false
 ---
 
+## Update log 3 (2026-04-12)
+
+Change the `diary` function's work style.
+
+[Here is the detail update log]()
+
 ## Update log 2 (2026-04-12)
 
 Open the `comments` function.
