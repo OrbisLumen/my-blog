@@ -21,6 +21,16 @@ const diaryData: DiaryItem[] = [
 		images: ["/images/diary/diary-1/sakura.jpg", "/images/diary/diary-1/1.webp"],
 		location: "Chengdu, Sichuan",
 		mood: "Excited",
+		tags:["Blog","OrbisLumen","FE"]
+	},
+	{
+		id: 2,
+		content:
+			"送修了rog笔记本，底部灯带问题困扰已久，成都这边的售后比南通的售后好很多，态度也好",
+		date: "2026-04-12T13:14:00Z",
+		location: "Chengdu, Sichuan",
+		mood: "Very Happy",
+		tags:["Device","Rog"]
 	},
 ];
 
