@@ -14,7 +14,7 @@ draft: false
 
 Change the `diary` function's work style.
 
-[Here is the detail update log]()
+[Here is the detail update log](https://github.com/OrbisLumen/my-blog/blob/master/update-log(personalized)/diary.md)
 
 ## Update log 2 (2026-04-12)
 
