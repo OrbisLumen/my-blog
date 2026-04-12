@@ -41,7 +41,7 @@ export const siteConfig: SiteConfig = {
 	// 特色页面开关配置（关闭未使用的页面有助于提升 SEO，关闭后请记得在 navbarConfig 中移除对应链接）
 	featurePages: {
 		anime: true, // 番剧页面开关
-		diary: false, // 日记页面开关
+		diary: true, // 日记页面开关
 		friends: true, // 友链页面开关
 		projects: false, // 项目页面开关
 		skills: false, // 技能页面开关
@@ -444,7 +444,7 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 };
 
 export const commentConfig: CommentConfig = {
-	enable: false, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
+	enable: true, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
 	system: "twikoo", // 评论系统选择: "twikoo" | "giscus"
 	twikoo: {
 		envId: "https://twikoo.vercel.app",

@@ -18,7 +18,9 @@ const diaryData: DiaryItem[] = [
 		content:
 			"Fianlly finishing my first blog",
 		date: "2026-04-11T17:21:00Z",
-		images: ["/images/diary/sakura.jpg", "/images/diary/1.webp"],
+		images: ["/images/diary/diary-1/sakura.jpg", "/images/diary/diary-1/1.webp"],
+		location: "Chengdu, Sichuan",
+		mood: "Excited",
 	},
 ];
 
