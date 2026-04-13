@@ -12,7 +12,7 @@ draft: false
 
 ::github{repo="OrbisLumen/cs61b-assignments"}
 
-CS61B 2019 Fall (Assignments) -> HW, LAB, Project
+CS61B 2024 Spring (Assignments) -> HW, LAB, Project
 
 ::github{repo="OrbisLumen/cs61b-others"}
 
@@ -43,4 +43,10 @@ Finish the proj0.
 Caz it is a 19 proj, some lib is abandoned, it's annoying to cope with that.
 
 What a pity, I couldn't see the universe animation...
+
+Er...
+
+Finally decided to change skeleton 19fa to 24sp
+
+Reasons are above
 
