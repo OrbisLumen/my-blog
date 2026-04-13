@@ -36,3 +36,11 @@ It is needed only open one proj at one time to build the correct debug environme
 
 The auto-grade is annoying (making me change several github repo structure)
 
+### 4.13
+
+Finish the proj0.
+
+Caz it is a 19 proj, some lib is abandoned, it's annoying to cope with that.
+
+What a pity, I couldn't see the universe animation...
+
