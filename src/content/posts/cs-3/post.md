@@ -50,3 +50,8 @@ Finally decided to change skeleton 19fa to 24sp
 
 Reasons are above
 
+### 4.15
+
+The Lab3 made me speechless...
+
+Tell me how to rewrite a pile of shit?!
