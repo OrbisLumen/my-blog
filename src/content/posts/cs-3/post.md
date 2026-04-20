@@ -55,3 +55,13 @@ Reasons are above
 The Lab3 made me speechless...
 
 Tell me how to rewrite a pile of shit?!
+
+### 4.19 
+
+Finished proj1A -> taking a glimpse of test-driving programming.
+
+### 4.20
+
+Finished projB -> Build a deque with arrayList 
+
+I enhanced my test writing ability and even found a bug which gpt didn't find first.
