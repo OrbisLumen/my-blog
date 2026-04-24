@@ -29,7 +29,7 @@ Finally found that there is neither IJ version nor JDK version's problem...
 
 It is needed only open one proj at one time to build the correct debug environment
 
-🤯🤯🤯 ->_<-
+ ->_<-
 
 
 ### 4.12
@@ -62,6 +62,18 @@ Finished proj1A -> taking a glimpse of test-driving programming.
 
 ### 4.20
 
-Finished projB -> Build a deque with arrayList 
+Finished proj1B -> Build a deque with arrayList 
 
 I enhanced my test writing ability and even found a bug which gpt didn't find first.
+
+### 4.21 
+
+Finished proj1C -> Extend deque's method and using deque
+
+Start the date structure part of cs61B
+
+### 4.24
+
+Finishing the Asymptotics, Disjoint Sets, BST, B-Tree, and Red-Black Tree lecture learning.
+
+Start the hw, lab to review such ADT.
