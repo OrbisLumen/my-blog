@@ -164,8 +164,8 @@
 		display: flex;
 		align-items: center;
 		gap: 0.2rem;
-		font-size: 10px;
-		font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+		font-size: 0.75rem;
+		font-family: inherit;
 		color: var(--content-meta);
 		white-space: nowrap;
 		flex-shrink: 0;
@@ -242,7 +242,7 @@
 		}
 
 		.time-label {
-			font-size: 9px;
+			font-size: 0.625rem;
 		}
 
 		.volume-wrap {
