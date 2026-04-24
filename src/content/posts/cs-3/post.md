@@ -10,14 +10,9 @@ draft: false
 ---
 ## Notice
 
-::github{repo="OrbisLumen/cs61b-assignments"}
+::github{repo="OrbisLumen/cs61b"}
 
-CS61B 2024 Spring (Assignments) -> HW, LAB, Project
-
-::github{repo="OrbisLumen/cs61b-others"}
-
-CS61B 2024 Spring (Lecture) -> Notes, Lec
-
+CS61B 2024 Spring
 
 ## Learning Track
 
