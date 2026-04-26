@@ -69,6 +69,13 @@ Start the date structure part of cs61B
 
 ### 4.24
 
-Finishing the Asymptotics, Disjoint Sets, BST, B-Tree, and Red-Black Tree lecture learning.
+Finish the Asymptotics, Disjoint Sets, BST, B-Tree, and Red-Black Tree lecture learning.
 
 Start the hw, lab to review such ADT.
+
+Jump the lab4 (github).
+
+### 4.26
+
+Finish the hw2 (Percolation), and learned the appliance of QuickUnion.
+
