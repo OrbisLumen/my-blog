@@ -79,3 +79,8 @@ Jump the lab4 (github).
 
 Finish the hw2 (Percolation), and learned the appliance of QuickUnion.
 
+Finish the lab5 (Disjoint Set), and apply the Weighted Quick Union with Path Compression.
+
+### 4.28
+
+Finish the lab6 (BSTMap), and finishide the remove with gpt's help.
