@@ -9,7 +9,7 @@ draft: false
 
 ## Overview
 
-::github{repo="OrbisLumen/acm--quick-exprience-"}
+::github{repo="OrbisLumen/acm-quick-exprience"}
 
 This is a brief record of my first exposure to ACM and ICPC through the “easy course” *ACM-ICPC Algorithms and Programming*, which I took to earn two credits.
 
