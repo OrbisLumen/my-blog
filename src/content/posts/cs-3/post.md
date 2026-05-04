@@ -3,11 +3,12 @@ title: CS61B
 published: 2026-04-10
 pinned: true
 priority: 1
-description: cs61b self-learning 
-tags: ["CS", "OrbisLumen","java","UCB"]
+description: CS61B self-learning
+tags: ["CS", "OrbisLumen", "java", "UCB"]
 category: CS
 draft: false
 ---
+
 ## Notice
 
 ::github{repo="OrbisLumen/cs61b"}
@@ -18,69 +19,82 @@ CS61B 2024 Spring
 
 ### 4.10
 
-Wasting my whole afternoon and evening to construct the environment for IntelliJ...
+Wasted my whole afternoon and evening setting up the IntelliJ environment...
 
-Finally found that there is neither IJ version nor JDK version's problem...
+Finally found that it was neither an IntelliJ version problem nor a JDK version problem...
 
-It is needed only open one proj at one time to build the correct debug environment
+I only needed to open one project at a time to build the correct debug environment.
 
- ->_<-
+->_<-
 
 
 ### 4.12
 
-The auto-grade is annoying (making me change several github repo structure)
+The autograder was annoying and made me change my GitHub repository structure several times.
+
 
 ### 4.13
 
-Finish the proj0.
+Finished Project 0.
 
-Caz it is a 19 proj, some lib is abandoned, it's annoying to cope with that.
+Since it was a FA19 project, some libraries were deprecated, which made it annoying to deal with.
 
-What a pity, I couldn't see the universe animation...
+What a pity — I couldn't see the universe animation...
 
 Er...
 
-Finally decided to change skeleton 19fa to 24sp
+Finally decided to switch from the FA19 skeleton to the SP24 skeleton.
 
-Reasons are above
+The reasons were mentioned above.
+
 
 ### 4.15
 
-The Lab3 made me speechless...
+Lab 3 made me speechless...
 
 Tell me how to rewrite a pile of shit?!
 
+
 ### 4.19 
 
-Finished proj1A -> taking a glimpse of test-driving programming.
+Finished Project 1A and got a glimpse of test-driven programming.
+
 
 ### 4.20
 
-Finished proj1B -> Build a deque with arrayList 
+Finished Project 1B and built a deque with an array list.
 
-I enhanced my test writing ability and even found a bug which gpt didn't find first.
+I improved my ability to write tests and even found a bug that GPT didn't notice at first.
+
 
 ### 4.21 
 
-Finished proj1C -> Extend deque's method and using deque
+Finished Project 1C, extended the deque methods, and used deques in practice.
 
-Start the date structure part of cs61B
+Started the data structures part of CS61B.
+
 
 ### 4.24
 
-Finish the Asymptotics, Disjoint Sets, BST, B-Tree, and Red-Black Tree lecture learning.
+Finished learning the lectures on asymptotics, disjoint sets, BSTs, B-trees, and red-black trees.
 
-Start the hw, lab to review such ADT.
+Started the homework and labs to review these ADTs.
 
-Jump the lab4 (github).
+Skipped Lab 4, which was about GitHub.
+
 
 ### 4.26
 
-Finish the hw2 (Percolation), and learned the appliance of QuickUnion.
+Finished HW2, Percolation, and learned the application of Quick Union.
 
-Finish the lab5 (Disjoint Set), and apply the Weighted Quick Union with Path Compression.
+Finished Lab 5, Disjoint Sets, and implemented Weighted Quick Union with Path Compression.
+
 
 ### 4.28
 
-Finish the lab6 (BSTMap), and finishide the remove with gpt's help.
+Finished Lab 6, BSTMap, and completed the remove method with GPT's help.
+
+
+### 4.30
+
+Finished Lab 7, LLRB Trees. The base case was difficult to figure out, so I completed it with GPT's help.
