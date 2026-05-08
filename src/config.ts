@@ -128,7 +128,6 @@ export const siteConfig: SiteConfig = {
 				"/assets/desktop-banner/1.webp",
 				"/assets/desktop-banner/2.webp",
 				"/assets/desktop-banner/3.webp",
-				"/assets/desktop-banner/4.webp",
 			], // 桌面横幅图片
 			mobile: [
 				"/assets/mobile-banner/1.webp",
