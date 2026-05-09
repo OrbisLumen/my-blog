@@ -326,7 +326,7 @@ export const zh_CN: Translation = {
 	[Key.copied]: "已复制",
 	[Key.copyLink]: "复制链接",
 	[Key.savePoster]: "保存海报",
-	[Key.scanToRead]: "扫码阅读",
+	[Key.scanToRead]: "来源网站",
 	[Key.shareOnSocial]: "分享",
 	[Key.shareOnSocialDescription]:
 		"如果这篇文章对你有帮助，欢迎分享给更多人！",

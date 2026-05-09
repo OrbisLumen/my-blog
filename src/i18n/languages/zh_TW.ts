@@ -328,7 +328,7 @@ export const zh_TW: Translation = {
 	[Key.copied]: "已複製",
 	[Key.copyLink]: "複製連結",
 	[Key.savePoster]: "儲存海報",
-	[Key.scanToRead]: "掃碼閱讀",
+	[Key.scanToRead]: "來源網站",
 	[Key.shareOnSocial]: "分享",
 	[Key.shareOnSocialDescription]:
 		"如果這篇文章對你有幫助，歡迎分享給更多人！",

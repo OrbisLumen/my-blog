@@ -5,14 +5,14 @@
 
 [![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen)](https://nodejs.org/)
 [![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)](https://pnpm.io/)
-[![Astro](https://img.shields.io/badge/Astro-6.1.2-orange)](https://astro.build/)
+[![Astro](https://img.shields.io/badge/Astro-6.3.0-orange)](https://astro.build/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue)](https://www.typescriptlang.org/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg?logo=apache)](https://opensource.org/licenses/Apache-2.0)
 
 [**🖥️ ライブデモ**](https://mizuki.mysqil.com/) | [**📝 ドキュメント**](https://docs.mizuki.mysqil.com/)
 
 🌏 **README の言語:**
-[**English**](./README.md) / [**中文**](./README.zh.md) / [**日本語**](./README.ja.md) / [**中文繁体**](./README.tw.md) /
+[**English**](./README.md) / [**中文**](./README.zh.md) / [**日本語**](./README.ja.md) / [**繁體中文**](./README.tw.md) /
 
 包括的なドキュメントですぐに始めましょう。テーマのカスタマイズや機能の設定、本番環境へのデプロイなどブログを完成させるために必要なすべての情報がドキュメントに網羅されています。
 
@@ -41,7 +41,7 @@
 [**English**](./README.md) /
 [**中文**](./README.zh.md) /
 [**日本語**](./README.ja.md) /
-[**中文繁体**](./README.tw.md) /
+[**繁體中文**](./README.tw.md) /
 
 ### 🔧 コンポーネント構成システムを再構築
 - **統合された構成アーキテクチャ:** 全く新しいモジュール型コンポーネント構成システムにより、動的なコンポーネント管理と順序設定に対応

@@ -5,14 +5,14 @@
 
 [![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen)](https://nodejs.org/)
 [![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue)](https://pnpm.io/)
-[![Astro](https://img.shields.io/badge/Astro-6.1.2-orange)](https://astro.build/)
+[![Astro](https://img.shields.io/badge/Astro-6.3.0-orange)](https://astro.build/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue)](https://www.typescriptlang.org/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg?logo=apache)](https://opensource.org/licenses/Apache-2.0)
 
 [**🖥️ 線上演示**](https://mizuki.mysqil.com/) | [**📝 使用者文檔**](https://docs.mizuki.mysqil.com/)
 
 🌏 **README 語言:**
-[**English**](./README.md) / [**中文**](./README.zh.md) / [**日本語**](./README.ja.md) / [**中文繁体**](./README.tw.md) /
+[**English**](./README.md) / [**中文**](./README.zh.md) / [**日本語**](./README.ja.md) / [**繁體中文**](./README.tw.md) /
 
 透過我們的綜合文檔快速開始。無論是自訂主題、配置功能，還是部署到生產環境，文檔涵蓋了您成功啟動部落格所需的所有內容。
 
@@ -41,7 +41,7 @@
 [**English**](./README.md) /
 [**中文**](./README.zh.md) /
 [**日本語**](./README.ja.md) /
-[**中文繁体**](./README.tw.md) /
+[**繁體中文**](./README.tw.md) /
 
 
 
@@ -175,8 +175,8 @@ lang: zh-TW      # 僅當文章語言與 config.ts 中的網站語言不同時�
 
 ### Frontmatter 欄位說明
 
-- **title**: 文章標題（必需）
-- **published**: 發布日期（必需）
+- **title**: 文章標題（必要）
+- **published**: 發布日期（必要）
 - **description**: 文章描述，用於 SEO 和預覽
 - **image**: 封面圖片路徑（相對於文章檔案）
 - **tags**: 標籤陣列，用於分類

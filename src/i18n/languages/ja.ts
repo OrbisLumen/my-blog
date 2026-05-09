@@ -342,7 +342,7 @@ export const ja: Translation = {
 	[Key.copied]: "コピーしました",
 	[Key.copyLink]: "リンクをコピー",
 	[Key.savePoster]: "ポスターを保存",
-	[Key.scanToRead]: "スキャンで読み込む",
+	[Key.scanToRead]: "出典元",
 	[Key.shareOnSocial]: "共有",
 	[Key.shareOnSocialDescription]:
 		"この記事が役に立ったときは、ぜひ他の人に共有してください!",

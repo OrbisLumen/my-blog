@@ -339,7 +339,7 @@ export const en: Translation = {
 	[Key.copied]: "Copied",
 	[Key.copyLink]: "Copy Link",
 	[Key.savePoster]: "Save Poster",
-	[Key.scanToRead]: "Scan to Read",
+	[Key.scanToRead]: "Source",
 	[Key.shareOnSocial]: "Share",
 	[Key.shareOnSocialDescription]:
 		"If this article helped you, please share it with others!",
