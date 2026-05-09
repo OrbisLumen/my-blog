@@ -98,3 +98,7 @@ Finished Lab 6, BSTMap, and completed the remove method with GPT's help.
 ### 4.30
 
 Finished Lab 7, LLRB Trees. The base case was difficult to figure out, so I completed it with GPT's help.
+
+### 5.9 
+
+Finished lec21, started the graph part.
