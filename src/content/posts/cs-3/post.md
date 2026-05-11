@@ -102,3 +102,7 @@ Finished Lab 7, LLRB Trees. The base case was difficult to figure out, so I comp
 ### 5.9 
 
 Finished lec21, started the graph part.
+
+### 5.11
+
+Finished lec22, 23, 24, 25, learned the dijkstra's algorithm.
