@@ -273,6 +273,7 @@ export const en: Translation = {
 	[Key.passwordProtectedDescription]:
 		"Please enter the password to view the protected content",
 	[Key.postEncrypted]: "Encrypted",
+	[Key.postEncryptedMessage]: "This post is encrypted",
 	[Key.passwordPlaceholder]: "Enter password",
 	[Key.passwordUnlock]: "Unlock",
 	[Key.passwordUnlocking]: "Unlocking...",

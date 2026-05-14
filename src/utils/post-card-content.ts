@@ -1,4 +1,5 @@
-export const ENCRYPTED_POST_HOME_CONTENT = "该文章已加密";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
 
 export interface PostHomeContentData {
 	description?: string;
@@ -10,9 +11,7 @@ function hasPassword(password?: string | null): boolean {
 	return typeof password === "string" && password.length > 0;
 }
 
-export function shouldHidePostHomeContent(
-	data: PostHomeContentData,
-): boolean {
+export function shouldHidePostHomeContent(data: PostHomeContentData): boolean {
 	return data.hideHomeContent ?? hasPassword(data.password);
 }
 
@@ -28,7 +27,7 @@ export function getPostPublicDescription(
 	fallback = "",
 ): string {
 	if (shouldHidePostHomeContent(data)) {
-		return ENCRYPTED_POST_HOME_CONTENT;
+		return i18n(I18nKey.postEncryptedMessage);
 	}
 
 	return data.description || fallback;
