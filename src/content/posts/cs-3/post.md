@@ -106,3 +106,11 @@ Finished lec21, started the graph part.
 ### 5.11
 
 Finished lec22, 23, 24, 25, learned the dijkstra's algorithm.
+
+### 5.15
+
+Finished lec26, 27, 28.
+
+### 5.16 
+
+Started the last unit with sorting and algorithm.
