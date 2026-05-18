@@ -114,3 +114,7 @@ Finished lec26, 27, 28.
 ### 5.16 
 
 Started the last unit with sorting and algorithm.
+
+### 5.18
+
+Finished selection, heap, merge, insertion sort.
