@@ -118,3 +118,7 @@ Started the last unit with sorting and algorithm.
 ### 5.18
 
 Finished selection, heap, merge, insertion sort.
+
+### 5.19 
+
+Learned quick sort and the theoretical bounds of compare sort.
