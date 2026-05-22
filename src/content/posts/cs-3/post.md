@@ -122,3 +122,11 @@ Finished selection, heap, merge, insertion sort.
 ### 5.19 
 
 Learned quick sort and the theoretical bounds of compare sort.
+
+### 5.20
+
+Reminder: skip the software engineering III and IV, plz watch it after proj 2.
+
+Reminder: skip the last three lec.
+
+Reminder: proj 2, 3 remained uncompleted.
