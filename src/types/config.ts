@@ -170,7 +170,26 @@ export interface SiteConfig {
 	showLastModified: boolean; // 控制"上次编辑"卡片显示的开关
 	pageProgressBar?: PageProgressBarConfig; // 页面顶部进度条配置
 	thirdPartyAnalytics?: ThirdPartyAnalyticsConfig; // 第三方统计配置
+
+	// 卡片样式配置
+	card?: {
+		border: boolean; // 是否开启卡片边框和微阴影立体效果
+		followTheme?: boolean; // 是否让卡片风格跟随主题色相
+	};
+
+	// 图片优化配置
+	imageOptimization?: {
+		formats?: "avif" | "webp" | "both"; // 图片输出格式：avif、webp 或 both（avif+webp）
+		quality?: number; // 图片质量 1-100，推荐 70-85
+		noReferrerDomains?: string[]; // 需要添加 no-referrer 的域名（支持通配符，如 "*.hdslb.com"）
+	};
 }
+
+// 图片格式类型
+export type ImageFormat = "avif" | "webp" | "png" | "jpg" | "jpeg" | "gif";
+
+// 响应式图片布局类型
+export type ResponsiveImageLayout = "constrained" | "full-width" | "none";
 
 export interface Favicon {
 	src: string;
@@ -364,7 +383,7 @@ export interface WidgetComponentConfig {
 		hidden?: ("mobile" | "tablet" | "desktop")[]; // 在指定设备上隐藏
 		collapseThreshold?: number; // 折叠阈值
 	};
-	customProps?: Record<string, any>; // 自定义属性，用于扩展组件功能
+	customProps?: Record<string, unknown>; // 自定义属性，用于扩展组件功能
 }
 
 export interface SidebarLayoutConfig {
@@ -438,12 +457,13 @@ export interface FullscreenWallpaperConfig {
  */
 export interface PioConfig {
 	enable: boolean; // 是否启用看板娘
-	models?: string[]; // 模型文件路径数组
+	models?: string[]; // 模型文件路径数组（支持 .model.json 和 .model3.json）
 	position?: "left" | "right"; // 看板娘位置
 	width?: number; // 看板娘宽度
 	height?: number; // 看板娘高度
 	mode?: "static" | "fixed" | "draggable"; // 展现模式
 	hiddenOnMobile?: boolean; // 是否在移动设备上隐藏
+	hideAboutMenu?: boolean; // 是否隐藏内置 About 菜单按钮
 	dialog?: {
 		welcome?: string | string[]; // 欢迎词
 		touch?: string | string[]; // 触摸提示
@@ -456,6 +476,20 @@ export interface PioConfig {
 			type: "read" | "link"; // 类型
 			text?: string; // 自定义文本
 		}[];
+	};
+	tips?: {
+		welcomeMessage?: string[]; // 欢迎语
+		messages?: string[]; // 循环提示内容
+		duration?: number; // 每条 tips 展示时长（ms）
+		interval?: number; // tips 循环间隔（ms）
+	};
+	menus?: {
+		items?: {
+			icon?: string; // Iconify 图标名称
+			label: string; // 无障碍标题
+			action: string; // 预定义动作名称
+		}[];
+		align?: "left" | "right"; // 菜单对齐方式
 	};
 }
 
@@ -472,6 +506,18 @@ export interface ShareConfig {
 export interface RelatedPostsConfig {
 	enable: boolean; // 是否启用相关文章功能
 	maxCount: number; // 相关文章数量
+	weights?: RelatedPostsWeights; // 评分权重配置
+	freshnessHalfLife?: number; // 新鲜度半衰期（天），默认 180
+}
+
+// 相关文章评分权重配置（所有权重归一化后使用）
+export interface RelatedPostsWeights {
+	tagSimilarity?: number; // 标签相似度权重，默认 1.0
+	titleSimilarity?: number; // 标题相似度权重，默认 0.6
+	descriptionSimilarity?: number; // 描述相似度权重，默认 0.4
+	categoryMatch?: number; // 分类匹配权重，默认 0.3
+	freshness?: number; // 时间新鲜度权重，默认 0.2
+	tagIDF?: boolean; // 是否启用标签 IDF 加权（稀有标签权重更高），默认 true
 }
 
 /**

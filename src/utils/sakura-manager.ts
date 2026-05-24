@@ -137,7 +137,9 @@ class SakuraList {
 }
 
 // 获取随机值的函数
+// biome-ignore lint/suspicious/noExplicitAny: polymorphic return based on option string
 function getRandom(option: string, config: SakuraConfig): any {
+	// biome-ignore lint/suspicious/noExplicitAny: polymorphic return
 	let ret: any;
 	let random: number;
 
@@ -150,8 +152,7 @@ function getRandom(option: string, config: SakuraConfig): any {
 			break;
 		case "s":
 			ret =
-				config.size.min +
-				Math.random() * (config.size.max - config.size.min);
+				config.size.min + Math.random() * (config.size.max - config.size.min);
 			break;
 		case "r":
 			ret = Math.random() * 6;
@@ -171,8 +172,7 @@ function getRandom(option: string, config: SakuraConfig): any {
 		case "fny":
 			random =
 				config.speed.vertical.min +
-				Math.random() *
-					(config.speed.vertical.max - config.speed.vertical.min);
+				Math.random() * (config.speed.vertical.max - config.speed.vertical.min);
 			ret = (_x: number, y: number) => y + random;
 			break;
 		case "fnr":

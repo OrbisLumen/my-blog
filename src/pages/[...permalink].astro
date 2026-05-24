@@ -1,4 +1,6 @@
 ---
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 /**
  * 处理 permalink 的文章（包括全局 permalink 和自定义 permalink）
  * 全局 permalink 启用时，所有文章链接在根目录下生成
@@ -8,7 +10,7 @@
  */
 import Image from "@components/atoms/Image/Image.astro";
 import Comment from "@components/comment/index.astro";
-import PasswordProtection from "@components/features/auth/PasswordProtection.astro";
+import Encryptor from "@components/features/auth/Encryptor.astro";
 import {
 	LastModified,
 	PostMeta,
@@ -27,10 +29,7 @@ import {
 } from "@utils/permalink-utils";
 import { getPostPublicDescription } from "@utils/post-card-content";
 import { getFileDirFromPath } from "@utils/url-utils";
-import type { CollectionEntry } from "astro:content";
-import { render } from "astro:content";
 import { Icon } from "astro-icon/components";
-import CryptoJS from "crypto-js";
 import { licenseConfig } from "src/config";
 
 import { permalinkConfig } from "@/config";
@@ -54,9 +53,8 @@ export async function getStaticPaths() {
 
 		// 优先使用自定义 permalink
 		if (hasCustomPermalink(entry)) {
-			permalink = entry.data
-				.permalink!.replace(/^\/+/, "")
-				.replace(/\/+$/, "");
+			permalink =
+				entry.data.permalink?.replace(/^\/+/, "").replace(/\/+$/, "") ?? null;
 		}
 		// 其次使用全局 permalink（如果启用）
 		else if (permalinkConfig.enable) {
@@ -81,20 +79,11 @@ const { Content, headings } = await render(entry);
 const { remarkPluginFrontmatter } = await render(entry);
 
 // 处理加密逻辑
-let encryptedContent = "";
-const isEncrypted = entry.data.encrypted && entry.data.password;
+const isEncrypted = !!(entry.data.encrypted && entry.data.password);
 const publicDescription = getPostPublicDescription(
 	entry.data,
 	entry.data.title,
 );
-
-if (isEncrypted) {
-	const contentToEncrypt = "MIZUKI-VERIFY:" + entry.body;
-	encryptedContent = CryptoJS.AES.encrypt(
-		contentToEncrypt,
-		String(entry.data.password),
-	).toString();
-}
 
 const jsonLd = {
 	"@context": "https://schema.org",
@@ -232,10 +221,15 @@ const jsonLd = {
 
 			{
 				isEncrypted ? (
-					<PasswordProtection
-						encryptedContent={encryptedContent}
+					<Encryptor
+						password={entry.data.password}
+						slug={entry.id}
 						hint={entry.data.passwordHint}
-					/>
+					>
+						<Markdown class="mb-6 markdown-content onload-animation">
+							<Content />
+						</Markdown>
+					</Encryptor>
 				) : (
 					<>
 						<Markdown class="mb-6 markdown-content onload-animation">

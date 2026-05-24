@@ -1,6 +1,8 @@
 ---
+import { getImage } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 import path from "node:path";
-
 import Comment from "@components/comment/index.astro";
 import {
 	LastModified,
@@ -18,9 +20,6 @@ import { getRelatedPosts, getSortedPosts } from "@utils/content-utils";
 import { hasCustomPermalink, initPostIdMap } from "@utils/permalink-utils";
 import { getPostPublicDescription } from "@utils/post-card-content";
 import { getFileDirFromPath, removeFileExtension } from "@utils/url-utils";
-import { getImage } from "astro:assets";
-import type { CollectionEntry } from "astro:content";
-import { render } from "astro:content";
 import {
 	licenseConfig,
 	permalinkConfig,
@@ -80,9 +79,7 @@ export async function getStaticPaths() {
 			if (entry.data.alias) {
 				// 移除开头的斜杠和结尾的斜杠
 				// 同时移除可能的 "posts/" 前缀，避免重复
-				let alias = entry.data.alias
-					.replace(/^\/+/, "")
-					.replace(/\/+$/, "");
+				let alias = entry.data.alias.replace(/^\/+/, "").replace(/\/+$/, "");
 				if (alias.startsWith("posts/")) {
 					alias = alias.replace(/^posts\//, "");
 				}
@@ -148,8 +145,7 @@ if (entry.data.image) {
 			const response = await fetch(entry.data.image);
 			const arrayBuffer = await response.arrayBuffer();
 			const base64 = Buffer.from(arrayBuffer).toString("base64");
-			const contentType =
-				response.headers.get("content-type") || "image/jpeg";
+			const contentType = response.headers.get("content-type") || "image/jpeg";
 			posterCoverUrl = `data:${contentType};base64,${base64}`;
 		} catch {
 			posterCoverUrl = entry.data.image;
@@ -315,6 +311,7 @@ const jsonLd = {
 				isEncrypted ? (
 					<Encryptor
 						password={entry.data.password}
+						slug={entry.id}
 						hint={entry.data.passwordHint}
 					>
 						<Markdown class="mb-6 markdown-content onload-animation">

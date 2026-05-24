@@ -79,9 +79,9 @@ export const en: Translation = {
 	[Key.animeEmptyLocal]:
 		"Please add anime information in src/data/anime.ts file",
 	[Key.animeConfigBilibili]:
-		"Please set your Bilibili vmid in the src/config.ts file",
+		"Please set your Bilibili vmid in the src/config/siteConfig.ts file",
 	[Key.animeConfigBangumi]:
-		"Please set your Bangumi userId in the src/config.ts file",
+		"Please set your Bangumi userId in the src/config/siteConfig.ts file",
 
 	// Diary Page
 	[Key.diarySubtitle]: "Share life, anytime, anywhere",
@@ -204,8 +204,7 @@ export const en: Translation = {
 		"Atom (Atom Syndication Format) is an XML-based standard for describing feeds and their items. With Atom, you can:",
 	[Key.atomBenefit1]:
 		"Get latest website content in time without manually visiting",
-	[Key.atomBenefit2]:
-		"Manage subscriptions to multiple websites in one place",
+	[Key.atomBenefit2]: "Manage subscriptions to multiple websites in one place",
 	[Key.atomBenefit3]: "Avoid missing important updates and articles",
 	[Key.atomBenefit4]: "Enjoy an ad-free, clean reading experience",
 	[Key.atomHowToUse]:
@@ -287,8 +286,7 @@ export const en: Translation = {
 	[Key.passwordUnlockButton]: "Unlock",
 	[Key.copyFailed]: "Copy failed:",
 	[Key.syntaxHighlightFailed]: "Syntax highlighting failed:",
-	[Key.autoSyntaxHighlightFailed]:
-		"Automatic syntax highlighting also failed:",
+	[Key.autoSyntaxHighlightFailed]: "Automatic syntax highlighting also failed:",
 	[Key.decryptionError]: "An error occurred during decryption:",
 	[Key.passwordHint]: "Hint",
 

@@ -1,34 +1,34 @@
 <script lang="ts">
-	import Icon from "@iconify/svelte";
-	import { onDestroy, onMount } from "svelte";
+import Icon from "@iconify/svelte";
+import { onDestroy, onMount } from "svelte";
 
-	import type { MusicPlayerState } from "@/stores/musicPlayerStore";
-	import { musicPlayerStore } from "@/stores/musicPlayerStore";
+import type { MusicPlayerState } from "@/stores/musicPlayerStore";
+import { musicPlayerStore } from "@/stores/musicPlayerStore";
 
-	let state: MusicPlayerState = musicPlayerStore.getState();
-	let unsubscribe: (() => void) | undefined;
+let state: MusicPlayerState = musicPlayerStore.getState();
+let unsubscribe: (() => void) | undefined;
 
-	function toggleControlCenter() {
-		musicPlayerStore.toggleExpanded();
-	}
+function toggleControlCenter() {
+	musicPlayerStore.toggleExpanded();
+}
 
-	$: currentSongTitle = state.currentSong?.title || "音乐控制中心";
-	$: ariaLabel = state.isExpanded
-		? `收起音乐控制中心：${currentSongTitle}`
-		: `打开音乐控制中心：${currentSongTitle}`;
-	$: statusIcon = state.isLoading
-		? "svg-spinners:90-ring-with-bg"
-		: "material-symbols:music-note-rounded";
+$: currentSongTitle = state.currentSong?.title || "音乐控制中心";
+$: ariaLabel = state.isExpanded
+	? `收起音乐控制中心：${currentSongTitle}`
+	: `打开音乐控制中心：${currentSongTitle}`;
+$: statusIcon = state.isLoading
+	? "svg-spinners:90-ring-with-bg"
+	: "material-symbols:music-note-rounded";
 
-	onMount(() => {
-		unsubscribe = musicPlayerStore.subscribe((nextState) => {
-			state = nextState;
-		});
+onMount(() => {
+	unsubscribe = musicPlayerStore.subscribe((nextState) => {
+		state = nextState;
 	});
+});
 
-	onDestroy(() => {
-		unsubscribe?.();
-	});
+onDestroy(() => {
+	unsubscribe?.();
+});
 </script>
 
 <button

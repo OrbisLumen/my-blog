@@ -45,7 +45,20 @@ async function processAlbumFolder(
 
 	// 读取相册信息
 	const infoContent = fs.readFileSync(infoPath, "utf-8");
-	let info: Record<string, any>;
+	interface AlbumInfo {
+		mode?: string;
+		cover?: string;
+		photos?: Record<string, unknown>[];
+		hidden?: boolean;
+		title?: string;
+		description?: string;
+		date?: string;
+		location?: string;
+		tags?: string[];
+		password?: string;
+		passwordHint?: string;
+	}
+	let info: AlbumInfo;
 	try {
 		info = JSON.parse(infoContent);
 	} catch (e) {
@@ -65,8 +78,11 @@ async function processAlbumFolder(
 			return null;
 		}
 
-		cover = info.cover;
-		photos = processExternalPhotos(info.photos || [], folderName);
+		cover = info.cover as string;
+		photos = processExternalPhotos(
+			(info.photos ?? []) as Parameters<typeof processExternalPhotos>[0],
+			folderName,
+		);
 	} else {
 		// 本地模式：检查本地文件
 		let coverPath = path.join(folderPath, "cover.webp");
@@ -101,6 +117,8 @@ async function processAlbumFolder(
 		location: info.location || "",
 		tags: info.tags || [],
 		photos,
+		password: info.password || undefined,
+		passwordHint: info.passwordHint || undefined,
 	};
 }
 
@@ -135,8 +153,8 @@ function scanPhotos(folderPath: string, albumId: string): Photo[] {
 		const baseName = path.basename(file, path.extname(file));
 		const ext = path.extname(file).toLowerCase();
 		if (ext === ".jpg" || ext === ".jpeg" || ext === ".png") {
-			if (imageFiles.includes(baseName + ".webp")) {
-				fileWebpMap.set(file, baseName + ".webp");
+			if (imageFiles.includes(`${baseName}.webp`)) {
+				fileWebpMap.set(file, `${baseName}.webp`);
 			}
 		}
 	}
@@ -165,16 +183,26 @@ function scanPhotos(folderPath: string, albumId: string): Photo[] {
 }
 
 function processExternalPhotos(
-	externalPhotos: any[],
+	externalPhotos: {
+		src: string;
+		id?: string;
+		thumbnail?: string;
+		alt?: string;
+		title?: string;
+		description?: string;
+		tags?: string[];
+		date?: string;
+		location?: string;
+		width?: number;
+		height?: number;
+	}[],
 	albumId: string,
 ): Photo[] {
 	const photos: Photo[] = [];
 
 	externalPhotos.forEach((photo, index) => {
 		if (!photo.src) {
-			console.warn(
-				`相册 ${albumId} 的第 ${index + 1} 张照片缺少 src 字段`,
-			);
+			console.warn(`相册 ${albumId} 的第 ${index + 1} 张照片缺少 src 字段`);
 			return;
 		}
 
