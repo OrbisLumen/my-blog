@@ -1,7 +1,7 @@
 import type { RelatedPostsConfig } from "../types/config";
 
 // 相关文章配置
-export const randomPostsConfig: RelatedPostsConfig = {
+export const relatedPostsConfig: RelatedPostsConfig = {
 	enable: true,
 	maxCount: 5,
 
