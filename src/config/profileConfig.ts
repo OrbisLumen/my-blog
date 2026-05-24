@@ -3,7 +3,7 @@ import type { ProfileConfig } from "../types/config";
 // 个人资料配置
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
-	name: "まつざか ゆき",
+	name: "Orbis Lumen",
 	bio: "世界は大きい、君は行かなければならない",
 	typewriter: {
 		enable: true, // 启用个人简介打字机效果
@@ -11,29 +11,29 @@ export const profileConfig: ProfileConfig = {
 	},
 	links: [
 		{
-			name: "Bilibili",
-			icon: "fa7-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
+			name: "GitHub",
+			icon: "fa7-brands:github",
+			url: "https://github.com/OrbisLumen",
 		},
 		{
 			name: "Gitee",
 			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
+			url: "https://gitee.com/orbislumen",
 		},
 		{
-			name: "GitHub",
-			icon: "fa7-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
-		},
-		{
-			name: "Codeberg",
-			icon: "simple-icons:codeberg",
-			url: "https://codeberg.org",
+			name: "Bilibili",
+			icon: "fa7-brands:bilibili",
+			url: "https://space.bilibili.com/646161462",
 		},
 		{
 			name: "Discord",
-			icon: "fa7-brands:discord",
-			url: "https://discord.gg/MqW6TcQtVM",
+			icon: "fa7-brands:youtube",
+			url: "https://www.youtube.com/@OrbisLumen-Jay",
+		},
+		{
+			name: "X",
+			icon: "fa7-brands:x-twitter",
+			url: "https://x.com/SorryToDoIt",
 		},
 	],
 };

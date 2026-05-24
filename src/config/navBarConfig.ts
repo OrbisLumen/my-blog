@@ -141,19 +141,19 @@ export const navBarConfig: NavBarConfig = {
 			children: [
 				{
 					name: "GitHub",
-					url: "https://github.com/LyraVoid/Mizuki",
-					external: true, // 外部链接，新标签页打开
+					url: "https://github.com/OrbisLumen",
+					external: true,
 					icon: "fa7-brands:github",
 				},
 				{
 					name: "Bilibili",
-					url: "https://space.bilibili.com/701864046",
+					url: "https://space.bilibili.com/646161462",
 					external: true,
 					icon: "fa7-brands:bilibili",
 				},
 				{
 					name: "Gitee",
-					url: "https://gitee.com/matsuzakayuki/Mizuki",
+					url: "https://gitee.com/orbislumen",
 					external: true,
 					icon: "mdi:git",
 				},
@@ -185,7 +185,7 @@ export const navBarConfig: NavBarConfig = {
 					name: "Devices",
 					url: "/devices/",
 					icon: "material-symbols:devices",
-					external: false, // 内部链接，当前页导航
+					external: false,
 				},
 			],
 		},
@@ -212,7 +212,7 @@ export const navBarConfig: NavBarConfig = {
 		// 自定义一级下拉菜单示例：其他页面
 		{
 			name: "Others",
-			url: "#", // "#" 作为占位 URL，点击不会跳转
+			url: "#",
 			icon: "material-symbols:more-horiz",
 			children: [
 				{
