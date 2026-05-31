@@ -21,7 +21,6 @@ export const SWUP_SELECTORS = {
 		"#navbar-wrapper",
 		"#sidebar",
 		".music-player",
-		"#pio-container",
 	],
 
 	// Banner 相关

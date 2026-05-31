@@ -111,6 +111,9 @@ const jsonLd = {
 	setOGTypeArticle={true}
 	postSlug={entry.id}
 	headings={headings}
+	publishedDate={entry.data.published}
+	category={entry.data.category || undefined}
+	wordCount={remarkPluginFrontmatter.words}
 >
 	<script
 		is:inline

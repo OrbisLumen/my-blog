@@ -263,13 +263,17 @@ const emptyMessage = i18n(I18nKey.animeEmpty);
 				});
 			}
 
+			function isPostListLayoutEnabled() {
+				return document.documentElement.getAttribute("data-post-list-layout-enabled") !== "false";
+			}
+
 			function initAnimeLayout() {
 				const animeListContainer = document.getElementById(containerId);
 				if (!animeListContainer) {
 					return false;
 				}
 				const currentLayout =
-					localStorage.getItem("postListLayout") || "list";
+					(isPostListLayoutEnabled() ? localStorage.getItem("postListLayout") : null) || "list";
 				updateAnimeListLayout(currentLayout, false);
 				requestAnimationFrame(() => {
 					animeListContainer.classList.remove("opacity-0");
@@ -297,8 +301,7 @@ const emptyMessage = i18n(I18nKey.animeEmpty);
 							document.getElementById(containerId);
 						if (animeListContainer) {
 							const currentLayout =
-								localStorage.getItem("postListLayout") ||
-								"list";
+								(isPostListLayoutEnabled() ? localStorage.getItem("postListLayout") : null) || "list";
 							updateAnimeListLayout(currentLayout, false);
 							animeListContainer.classList.remove("opacity-0");
 						}

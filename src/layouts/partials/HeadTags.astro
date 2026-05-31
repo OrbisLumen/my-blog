@@ -109,6 +109,7 @@ const favicons: Favicon[] =
 		DARK_MODE,
 		BANNER_HEIGHT_EXTEND: 30,
 		configHue,
+		themeColorFixed: siteConfig.themeColor.fixed ?? false,
 		pageScaling: siteConfig.pageScaling,
 	}}
 >
@@ -135,7 +136,7 @@ const favicons: Favicon[] =
 	}
 
 	// Load the hue from local storage
-	const hue = localStorage.getItem("hue") || configHue;
+	const hue = themeColorFixed ? configHue : (localStorage.getItem("hue") || configHue);
 	document.documentElement.style.setProperty("--hue", hue);
 
 	// calculate the --banner-height-extend, which needs to be a multiple of 4 to avoid blurry text

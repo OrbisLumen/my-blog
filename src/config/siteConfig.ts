@@ -76,6 +76,8 @@ export const siteConfig: SiteConfig = {
 		// 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（双列布局）
 		// 注意：如果侧边栏配置启用了"both"双侧边栏，则无法使用文章列表"grid"网格（双列）布局
 		defaultMode: "list",
+		// 是否启用布局切换功能
+		enable: true,
 		// 是否允许用户切换布局
 		allowSwitch: true,
 		// 文章列表页分类导航条配置
@@ -99,7 +101,7 @@ export const siteConfig: SiteConfig = {
 		// "mobile" = 仅在移动端显示
 		// "desktop" = 仅在桌面端显示
 		// "both" = 在所有设备上显示
-		showModeSwitchOnMobile: "desktop",
+		showModeSwitchOnMobile: "both",
 	},
 
 	banner: {
@@ -120,14 +122,16 @@ export const siteConfig: SiteConfig = {
 		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
 
 		carousel: {
-			enable: true, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
-			interval: 3, // 轮播间隔时间（秒）
+			enable: true,
+			interval: 3,
+			switchable: true,
 		},
 
 		waves: {
-			enable: true, // 是否启用水波纹效果（注意：此功能性能开销较大）
-			performanceMode: false, // 性能模式：减少动画复杂度(性能提升40%)
-			mobileDisable: false, // 移动端禁用
+			enable: true,
+			performanceMode: false,
+			mobileDisable: false,
+			switchable: true,
 		},
 
 		// PicFlow API支持(智能图片API)
@@ -142,7 +146,7 @@ export const siteConfig: SiteConfig = {
 		homeText: {
 			enable: true, // 在主页显示自定义文本
 			title: "OrbisLumenの部屋", // 主页横幅主标题
-
+			switchable: true,
 			subtitle: [
 				"特別なことはないけど、君がいると十分です",
 				"今でもあなたは私の光",

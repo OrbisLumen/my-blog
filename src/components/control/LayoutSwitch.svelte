@@ -70,7 +70,8 @@ function handleMediaQueryChange(e: MediaQueryListEvent | MediaQueryList) {
 onMount(() => {
 	mounted = true;
 
-	const sessionLayout = getSavedSessionLayout();
+	const layoutEnabled = siteConfig.postListLayout?.enable ?? true;
+	const sessionLayout = layoutEnabled ? getSavedSessionLayout() : null;
 	const defaultLayout = siteConfig.postListLayout.defaultMode as LayoutMode;
 
 	if (sessionLayout === "list" || sessionLayout === "grid") {

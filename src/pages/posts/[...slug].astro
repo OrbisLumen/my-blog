@@ -214,6 +214,9 @@ const jsonLd = {
 	postSlug={entry.id}
 	headings={headings}
 	coverImage={ogCoverUrl}
+	publishedDate={entry.data.published}
+	category={entry.data.category || undefined}
+	wordCount={remarkPluginFrontmatter.words}
 >
 	<script
 		is:inline

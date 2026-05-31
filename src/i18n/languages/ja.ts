@@ -217,7 +217,33 @@ export const ja: Translation = {
 	// 壁紙モード
 	[Key.wallpaperBanner]: "バナーモード",
 	[Key.wallpaperFullscreen]: "フルスクリーンモード",
+	[Key.wallpaperOverlay]: "オーバーレイモード",
 	[Key.wallpaperNone]: "壁紙を非表示",
+
+	// 設定パネル
+	[Key.settingsPanel]: "設定",
+	[Key.wallpaperSettings]: "壁紙",
+	[Key.overlaySettings]: "壁紙効果",
+	[Key.overlayOpacity]: "壁紙の透明度",
+	[Key.overlayBlur]: "背景のぼかし",
+	[Key.overlayCardOpacity]: "カードの透明度",
+	[Key.fullscreenOpacity]: "壁紙の透明度",
+	[Key.fullscreenBlur]: "背景のぼかし",
+	[Key.wavesAnimation]: "ウェーブアニメーション",
+	[Key.bannerTitle]: "バナータイトル",
+	[Key.bannerCarousel]: "バナーカルーセル",
+	[Key.sakuraEffect]: "桜エフェクト",
+	[Key.effectsSettings]: "エフェクト",
+	[Key.postListLayout]: "投稿レイアウト",
+	[Key.postListLayoutList]: "リスト",
+	[Key.postListLayoutGrid]: "グリッド",
+	[Key.resetAll]: "すべてリセット",
+	[Key.settingsThemeColor]: "テーマカラー",
+	[Key.settingsWallpaper]: "壁紙",
+	[Key.settingsWallpaperEffects]: "壁紙効果",
+	[Key.settingsBanner]: "バナーオプション",
+	[Key.settingsEffects]: "エフェクト",
+	[Key.settingsLayout]: "レイアウト",
 
 	// スキルページ
 	[Key.skills]: "スキル",

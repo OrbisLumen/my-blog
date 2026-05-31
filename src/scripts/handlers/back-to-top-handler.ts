@@ -79,6 +79,7 @@ export class BackToTopHandler {
 			this.updateBackToTopButton(scrollTop, showBackToTopThreshold);
 			this.updateTOCVisibility(scrollTop, bannerHeight);
 			this.updateNavbarVisibility(scrollTop);
+			this.updatePageOverlayScroll(scrollTop);
 		});
 	}
 
@@ -147,10 +148,12 @@ export class BackToTopHandler {
 			return;
 		}
 
-		const isHome =
-			document.body.classList.contains("lg:is-home") &&
-			window.innerWidth >= 1280;
-		const currentBannerHeight = isHome ? BANNER_HEIGHT_HOME : BANNER_HEIGHT;
+		if (document.body.classList.contains("fullscreen-banner")) {
+			this.navbar.classList.remove("navbar-hidden");
+			return;
+		}
+
+		const currentBannerHeight = BANNER_HEIGHT_HOME;
 
 		const threshold =
 			window.innerHeight * (currentBannerHeight / 100) -
@@ -161,6 +164,24 @@ export class BackToTopHandler {
 		} else {
 			this.navbar.classList.remove("navbar-hidden");
 		}
+	}
+
+	private updatePageOverlayScroll(scrollTop: number): void {
+		const overlay = document.getElementById("banner-page-overlay");
+		if (!overlay || !overlay.style.opacity) {
+			return;
+		}
+
+		const isFullscreen = document.body.classList.contains(
+			"fullscreen-banner",
+		);
+		const bannerHeight = isFullscreen
+			? window.innerHeight
+			: window.innerHeight * (BANNER_HEIGHT_HOME / 100);
+		const progress = Math.min(scrollTop / bannerHeight, 1);
+
+		overlay.style.opacity = String(1 - progress);
+		overlay.style.transform = `translateY(${-progress * 30}px) scale(${1 - progress * 0.05})`;
 	}
 
 	/**

@@ -96,42 +96,62 @@ const renderGroups = [
 
 <div 
 	class:list={[
-		"fixed inset-0 w-full h-full overflow-hidden pointer-events-none",
+		"fixed inset-0 w-full h-full overflow-hidden pointer-events-none wallpaper-container",
 		className
 	]}
-	style={`z-index: ${zIndex}; opacity: ${opacity}; transform: translateZ(0); perspective: 1000px;`}
+	style={`z-index: ${zIndex}; transform: translateZ(0); perspective: 1000px; opacity: var(--wallpaper-opacity, ${opacity}); filter: blur(var(--wallpaper-blur, ${blurAmount}px));`}
 	data-fullscreen-wallpaper
 >
-	<script is:inline>
-	// 立即执行脚本：防止闪烁
+	<script is:inline define:vars={{ wallpaperEnabled: config.enable ?? true, overlaySwitchable: config.overlay?.switchable ?? true }}>
 	(function() {
-		const mode = localStorage.getItem('wallpaperMode') || 'banner';
-		if (mode !== 'fullscreen') {
+		const root = document.documentElement;
+		const wallpaperEnabledVal = wallpaperEnabled;
+		const mode = wallpaperEnabledVal ? (localStorage.getItem('wallpaperMode') || 'banner') : 'banner';
+
+		if (mode === 'overlay') {
+			const isSw = typeof overlaySwitchable === 'object' ? overlaySwitchable : { opacity: !!overlaySwitchable, blur: !!overlaySwitchable, cardOpacity: !!overlaySwitchable };
+			const overlayOpacity = isSw.opacity ? localStorage.getItem('overlayOpacity') : null;
+			const overlayBlur = isSw.blur ? localStorage.getItem('overlayBlur') : null;
+			const overlayCardOpacity = isSw.cardOpacity ? localStorage.getItem('overlayCardOpacity') : null;
+
+			if (overlayOpacity) {
+				document.currentScript.parentElement.style.setProperty('--wallpaper-opacity', overlayOpacity);
+			}
+			if (overlayBlur) {
+				document.currentScript.parentElement.style.setProperty('--wallpaper-blur', overlayBlur + 'px');
+			}
+			if (overlayCardOpacity) {
+				root.style.setProperty('--card-transparent-opacity', overlayCardOpacity);
+			}
+		}
+
+		if (mode !== 'overlay') {
+			root.style.removeProperty('--card-transparent-opacity');
 			document.currentScript.parentElement.style.display = 'none';
 		}
 	})();
 	</script>
 
 	{isCarouselEnabled ? (
-		renderGroups.map(group => group.hasImages && (
-			<div class={`${group.containerClass} w-full h-full relative`} style="transform: translateZ(0);">
-				{group.images.map((src, index) => (
-					<img
-						src={src}
-						alt={`${group.key} wallpaper ${index + 1}`}
-						class={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${positionClass}`}
-						data-carousel-item={index}
-						style={`transform: translateZ(0); backface-visibility: hidden; will-change: opacity; ${blurAmount > 0 ? `filter: blur(${blurAmount}px);` : ''}; opacity: ${index === 0 ? 1 : 0};`}
-						decoding="async"
-						loading={index === 0 ? "eager" : "lazy"}
-						fetchpriority={index === 0 ? "high" : undefined}
+			renderGroups.map(group => group.hasImages && (
+				<div class={`${group.containerClass} w-full h-full relative`} style="transform: translateZ(0);">
+					{group.images.map((src, index) => (
+						<img
+							src={src}
+							alt={`${group.key} wallpaper ${index + 1}`}
+							class={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${positionClass}`}
+							data-carousel-item={index}
+							style={`transform: translateZ(0); backface-visibility: hidden; will-change: opacity; opacity: ${index === 0 ? 1 : 0};`}
+							decoding="async"
+							loading={index === 0 ? "eager" : "lazy"}
+							fetchpriority={index === 0 ? "high" : undefined}
 					/>
 				))}
 			</div>
 		))
 	) : (
 		<div id="wallpaper-single-container" class="w-full h-full relative">
-			<script is:inline define:vars={{ desktopImages: imageSources.desktop, mobileImages: imageSources.mobile, positionClass, blurAmount }}>
+			<script is:inline define:vars={{ desktopImages: imageSources.desktop, mobileImages: imageSources.mobile, positionClass }}>
 				(function() {
 					const getRandomImage = (images, storageKey) => {
 						if (images.length === 0) {return null;}
@@ -162,7 +182,7 @@ const renderGroups = [
 								src="${desktopSrc}"
 								alt="desktop wallpaper"
 								class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${positionClass}"
-								style="transform: translateZ(0); backface-visibility: hidden; will-change: opacity; ${blurAmount > 0 ? `filter: blur(${blurAmount}px);` : ''} opacity: 1;"
+								style="transform: translateZ(0); backface-visibility: hidden; will-change: opacity; opacity: 1;"
 								decoding="async"
 								loading="eager"
 								fetchpriority="high"
@@ -180,7 +200,7 @@ const renderGroups = [
 								src="${mobileSrc}"
 								alt="mobile wallpaper"
 								class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${positionClass}"
-								style="transform: translateZ(0); backface-visibility: hidden; will-change: opacity; ${blurAmount > 0 ? `filter: blur(${blurAmount}px);` : ''} opacity: 1;"
+								style="transform: translateZ(0); backface-visibility: hidden; will-change: opacity; opacity: 1;"
 								decoding="async"
 								loading="eager"
 								fetchpriority="high"

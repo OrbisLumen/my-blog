@@ -288,7 +288,33 @@ export const zh_TW: Translation = {
 	// 壁紙模式
 	[Key.wallpaperBanner]: "橫幅模式",
 	[Key.wallpaperFullscreen]: "全屏模式",
+	[Key.wallpaperOverlay]: "覆蓋模式",
 	[Key.wallpaperNone]: "隱藏壁紙",
+
+	// 設定面板
+	[Key.settingsPanel]: "設定",
+	[Key.wallpaperSettings]: "壁紙",
+	[Key.overlaySettings]: "壁紙效果",
+	[Key.overlayOpacity]: "壁紙透明度",
+	[Key.overlayBlur]: "背景模糊",
+	[Key.overlayCardOpacity]: "卡片透明度",
+	[Key.fullscreenOpacity]: "壁紙透明度",
+	[Key.fullscreenBlur]: "背景模糊",
+	[Key.wavesAnimation]: "水波紋動畫",
+	[Key.bannerTitle]: "橫幅標題",
+	[Key.bannerCarousel]: "橫幅輪播",
+	[Key.sakuraEffect]: "櫻花特效",
+	[Key.effectsSettings]: "特效",
+	[Key.postListLayout]: "文章佈局",
+	[Key.postListLayoutList]: "列表",
+	[Key.postListLayoutGrid]: "網格",
+	[Key.resetAll]: "全部重置",
+	[Key.settingsThemeColor]: "主題色",
+	[Key.settingsWallpaper]: "壁紙",
+	[Key.settingsWallpaperEffects]: "壁紙效果",
+	[Key.settingsBanner]: "橫幅選項",
+	[Key.settingsEffects]: "特效",
+	[Key.settingsLayout]: "佈局",
 
 	// 站點統計
 	[Key.siteStats]: "站點統計",

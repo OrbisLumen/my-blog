@@ -286,7 +286,33 @@ export const zh_CN: Translation = {
 	// 壁纸模式
 	[Key.wallpaperBanner]: "横幅模式",
 	[Key.wallpaperFullscreen]: "全屏模式",
+	[Key.wallpaperOverlay]: "覆盖模式",
 	[Key.wallpaperNone]: "隐藏壁纸",
+
+	// 设置面板
+	[Key.settingsPanel]: "设置",
+	[Key.wallpaperSettings]: "壁纸",
+	[Key.overlaySettings]: "壁纸效果",
+	[Key.overlayOpacity]: "壁纸透明度",
+	[Key.overlayBlur]: "背景模糊",
+	[Key.overlayCardOpacity]: "卡片透明度",
+	[Key.fullscreenOpacity]: "壁纸透明度",
+	[Key.fullscreenBlur]: "背景模糊",
+	[Key.wavesAnimation]: "水波纹动画",
+	[Key.bannerTitle]: "横幅标题",
+	[Key.bannerCarousel]: "横幅轮播",
+	[Key.sakuraEffect]: "樱花特效",
+	[Key.effectsSettings]: "特效",
+	[Key.postListLayout]: "文章布局",
+	[Key.postListLayoutList]: "列表",
+	[Key.postListLayoutGrid]: "网格",
+	[Key.resetAll]: "全部重置",
+	[Key.settingsThemeColor]: "主题色",
+	[Key.settingsWallpaper]: "壁纸",
+	[Key.settingsWallpaperEffects]: "壁纸效果",
+	[Key.settingsBanner]: "横幅选项",
+	[Key.settingsEffects]: "特效",
+	[Key.settingsLayout]: "布局",
 
 	// 站点统计
 	[Key.siteStats]: "站点统计",
