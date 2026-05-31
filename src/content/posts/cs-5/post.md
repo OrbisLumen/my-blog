@@ -1,5 +1,5 @@
 ---
-title: CS329P
+title: 动手学深度学习v2
 published: 2026-04-28
 description: Machine Learning Course (李沐)
 tags: ["CS", "ML", "OrbisLumen", "py", "Stanford"]
@@ -72,6 +72,10 @@ draft: false
 
 学习了硬件相关知识，知道了并行加速之类的问题
 
-### 5.26
+### 5.26 - 5.29
 
 学习了计算机视觉的微调以及基于锚框的目标检测系列算法
+
+### 5.30 - 5.31
+
+学习了循环神经网络
