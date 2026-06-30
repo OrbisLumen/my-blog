@@ -1,7 +1,6 @@
 ---
 title: CS61B
 published: 2026-04-10
-pinned: true
 priority: 1
 description: CS61B self-learning
 tags: ["CS", "OrbisLumen", "java", "UCB"]
