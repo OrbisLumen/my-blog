@@ -29,7 +29,7 @@ on:
   workflow_dispatch:
     inputs:
       content_ref:
-        description: "内容仓 ref 或 commit SHA（留空使用 main）"
+        description: ""
         required: false
         default: ""
   # 兜底：repository_dispatch 事件偶尔会丢，每天重建一次保证最终一致。
@@ -49,7 +49,7 @@ permissions:
 
 env:
   # TODO: 替换为你的内容仓。
-  CONTENT_REPOSITORY: OWNER/shirone-content
+  CONTENT_REPOSITORY: OrbisLumen/my-blog-content
   CONTENT_WORKING_COPY: .content-src
 
 jobs:
